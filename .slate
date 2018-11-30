@@ -1,0 +1,39 @@
+## Key aliases
+alias hyper ctrl;shift;alt;cmd
+
+## Application aliases
+
+## Brownsers
+alias chrome   'Google Chrome'
+alias brave    'Brave'
+
+## Editors
+alias code          'Code'
+alias codeInsiders  'Code - Insiders'
+
+## Terminal
+alias iterm   'iTerm2'
+
+## Player
+alias spotify   'Spotify'
+alias radiant   'Radiant Player'
+
+## Messenger
+alias whats            'WhatsApp'
+alias slack            'Slack'
+alias skypeBusiness    'Skype for Business'
+
+## Others
+alias finder    'Finder'
+alias gitkraken 'GitKraken'
+
+## App bindings
+bind c:${hyper}      sequence focus ${code} | focus ${codeInsiders}
+bind f:${hyper}      sequence focus ${chrome} | focus ${brave}
+bind s:${hyper}      sequence focus ${spotify} | focus ${radiant}
+bind e:${hyper}      sequence focus ${slack} | focus ${skypeBusiness}
+
+bind d:${hyper}      focus ${iterm}
+bind h:${hyper}      focus ${finder}
+bind w:${hyper}      focus ${whats}
+bind g:${hyper}      focus ${gitkraken}
