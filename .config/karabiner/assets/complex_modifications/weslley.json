@@ -1,0 +1,106 @@
+{
+    "title": "Weslley Modifications",
+    "rules": [
+      {
+        "description": "Remap extra mouse buttons to return and close a window",
+        "manipulators": [
+          {
+            "type": "basic",
+            "from": {
+              "pointing_button": "button5"
+            },
+            "to": [
+              {
+                "key_code": "w",
+                "modifiers": "left_command"
+              }
+            ]
+          },
+          {
+            "type": "basic",
+            "from": {
+              "pointing_button": "button4"
+            },
+            "to": [
+              {
+                "key_code": "open_bracket",
+                "modifiers": "left_command"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "description": "Change caps_lock key to command+control+option+shift. (Post f19 key when pressed alone)",
+        "manipulators": [
+          {
+            "type": "basic",
+            "from": {
+              "key_code": "caps_lock",
+              "modifiers": {
+                "optional": [
+                  "any"
+                ]
+              }
+            },
+            "to": [
+              {
+                "key_code": "left_shift",
+                "modifiers": [
+                  "left_command",
+                  "left_control",
+                  "left_option"
+                ]
+              }
+            ],
+            "to_if_alone": [
+              {
+                "key_code": "f19"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "description": "Fix broken keys in my apple wireless keyboard",
+        "manipulators": [
+          {
+            "type": "basic",
+            "from": {
+              "key_code": "f11"
+            },
+            "to": [
+              {
+                "key_code": "0"
+              }
+            ]
+          },
+          {
+            "type": "basic",
+            "from": {
+              "key_code": "f11",
+              "modifiers": {
+                "mandatory": [
+                  "left_shift"
+                ]
+              }
+            },
+            "to_if_alone": [
+              {
+                "key_code": "0",
+                "modifiers": [
+                  "right_shift"
+                ]
+              }
+            ],
+            "to": [
+              {
+                "key_code": "right_shift",
+                "modifiers": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
