@@ -6,6 +6,8 @@ alias hyper ctrl;shift;alt;cmd
 ## Brownsers
 alias chrome   'Google Chrome'
 alias brave    'Brave'
+alias safari   'Safari'
+alias firefox  'Firefox'
 
 ## Editors
 alias code          'Code'
@@ -28,8 +30,9 @@ alias finder    'Finder'
 alias gitkraken 'GitKraken'
 
 ## App bindings
-bind c:${hyper}      sequence focus ${code} | focus ${codeInsiders}
-bind f:${hyper}      sequence focus ${chrome} | focus ${brave}
+bind c:${hyper}      sequence focus ${codeInsiders} | focus ${code}
+bind f:${hyper}      focus ${chrome}
+bind v:${hyper}      sequence focus ${safari} | focus ${firefox} | focus ${brave}
 bind s:${hyper}      sequence focus ${spotify} | focus ${radiant}
 bind e:${hyper}      sequence focus ${slack} | focus ${skypeBusiness}
 

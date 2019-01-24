@@ -3,12 +3,14 @@
 
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/weslleyneri/.oh-my-zsh"
+export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="agnoster"
+DEFAULT_USER=$USER
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -65,6 +67,7 @@ ZSH_THEME="agnoster"
 plugins=(
   git
   z
+  adb
   nvm
 )
 
@@ -99,4 +102,8 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
-DEFAULT_USER=$USER
+alias mirror="scrcpy -b 2M -m 640"
+alias adbs="adb shell input keyevent 82"
+alias adbp="adb reverse tcp:8081 tcp:8081"
+
+export PATH=/Users/weslleyneri/Library/Android/sdk/platform-tools:/Users/weslleyneri/Library/Android/sdk/tools:$PATH
